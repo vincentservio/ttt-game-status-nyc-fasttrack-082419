@@ -22,3 +22,15 @@ WIN_COMBINATIONS = [
     def full? (board) 
       board.all? {|token| token == "X" || token == "O"}
     end 
+    
+    def draw? (board)
+      full?(board) && !won? (board)
+      
+      def over? (board)
+        won? (board) || full? (board)
+      end 
+      
+      def winner (board)
+        if won? (board)
+          winning_combo = won?(board)
+          board [winnging_combo.first]
