@@ -34,3 +34,4 @@ WIN_COMBINATIONS = [
         if won? (board)
           winning_combo = won?(board)
           board [winnging_combo.first]
+        end
